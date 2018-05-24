@@ -1,0 +1,29 @@
+
+// color
+$colorPrimary : #424e64;
+$colorSecondary : #bbc2ca;
+$colorAccent : rgb(245, 157, 172);
+$fontColorPrimary:#424e64;
+$fontColorSecondary: #bbc2ca;
+$fontColorWhite: white;
+$fontColorBlack:black;
+
+// margin
+$gutter : 2%;
+$gutterDbl: (2 * $gutter);
+
+// font related attributes
+// font-familly
+$fontDefault: 'Lato', sans-serif;
+
+// font-weight
+$weightNormal : 300;
+$weightBold:700;
+
+// font-size
+$fontSizeDefault:16px;
+
+
+
+
+$transitionDelayDefault : 0.65s;

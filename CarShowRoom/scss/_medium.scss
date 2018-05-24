@@ -1,0 +1,23 @@
+
+/* ---------------------------- MAIN --------------------------------- */
+
+main{
+    figure.photo{
+        width:50% - $gutterDbl;
+        margin: .5rem $gutter;
+        float: left;
+    }
+
+    figure.photo:nth-child(2n){
+        clear: left;
+    }
+    div.blog article {
+        float: left;
+        width: 50% - $gutterDbl;
+    }
+
+    
+    div.blog article:nth-child(2n+1) {
+        clear: left;
+    }
+}

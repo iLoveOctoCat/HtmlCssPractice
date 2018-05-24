@@ -1,0 +1,176 @@
+/* prevent adjustments of fonts size after orientation changes 
+in IE on windows Phone and in ios */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* apply a natural box layout model to all elements */
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+// overall styling for BODY of the document
+body{
+    background-color: white;
+    color: $fontColorBlack;
+    font-family: $fontDefault;
+    font-size: $fontSizeDefault;
+}
+
+// overall styling for HEADER of the document
+header{
+    background-color: $colorPrimary;
+    color: $fontColorSecondary;
+    padding: 1rem $gutter;
+
+    h1{
+        font-size: 2rem; 
+        font-weight: $weightNormal;
+    }
+
+    h2{
+        font-size: 1.08rem;
+        font-weight: $weightNormal;
+    }
+}
+
+
+
+
+// overall styling for NAVIGATION of the document
+nav{
+    background-color: $colorSecondary;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    ul li{
+        float: left;
+        width : 25%;
+        border-right: 1px solid rgba(0,0,0,0.3);
+    }
+
+    ul li:last-child{
+        border-right:none;
+    }
+
+    ul li a{
+        display: block;
+        text-align: center;
+        font-weight: $weightBold;
+        padding: .5rem 0;
+        color: $fontColorPrimary;
+        text-decoration: none;
+        transition: background $transitionDelayDefault ease;
+    }
+
+    ul li.active a{
+        background-color: darken($colorSecondary, 15%)
+    }
+
+    ul li a:hover{
+        color: $fontColorSecondary;
+        background-color: $colorPrimary;
+    }
+
+   
+}
+
+
+
+// overall styling for MAIN of the document
+main{
+    figure.banner{width:100%;}
+
+    figure.banner img{
+        width:100%;
+    }
+
+    h1{
+        font-size: 2rem;
+        margin:1rem 0 0 $gutter;
+        color:$fontColorPrimary;
+    }
+
+    h2{
+        font-size: 1.5rem;
+        margin:.75rem 0 0 $gutter;
+        color:lighten($fontColorPrimary,10%);
+    }
+
+    h3{
+        font-size: 1.2rem;
+        color:lighten($fontColorPrimary,20%);
+    }
+
+    p{
+        line-height: 130%;
+        color: $fontColorPrimary;
+    }
+
+    hr.fadeAway{
+        background: linear-gradient(to right, 
+                    rgba(66,78,100,1) 0%,
+                    rgba(66,78,100,0.99) 1%,
+                    rgba(66,78,100,0) 100%);
+        height: 2px;
+        border: none;
+        margin: 0 $gutter;
+    }
+
+    figure.photo{
+        width:100% - $gutterDbl;
+        margin: .5rem $gutter;
+    }
+    figure.photo img{
+        width:100%;
+    }
+
+    figure.photo figcaption{
+        text-align: center;
+        color:$fontColorPrimary;
+    }
+
+    div.blog article{
+        margin: 0.5rem $gutter;
+        width: 100% - $gutterDbl;
+    }
+    .showcase{
+        display: table;
+    }
+}
+
+
+// overall styling for FOOTER of the document
+footer{
+    background-color: $colorPrimary;
+    p{
+    color:$fontColorSecondary;
+    text-align: center;
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+    }
+
+    p a{
+        color: $fontColorSecondary;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// Clearfix: Force an alement not to collapse
+.clearFix:after{
+    content: "";
+    display: table;
+    clear: both;
+}

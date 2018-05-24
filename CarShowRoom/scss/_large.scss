@@ -1,0 +1,60 @@
+/* ---------------------------- BODY --------------------------------- */
+
+body{
+    background-image: url(../images/texturedBackgroundImage.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div#wrapper{
+    max-width: 80rem;
+    margin: 2rem auto;
+    box-shadow: 0 0 10px #000;
+    background-color: white;
+}
+
+/* ---------------------------- NAVIGATION --------------------------------- */
+nav{
+    ul{
+        margin-left: $gutter;
+        border-left: 1px solid rgba(0, 0, 0,0.3);
+    }
+
+    ul li {
+        width: auto;
+    }
+
+    ul li a{
+        padding: 0.5rem 1rem;
+    }
+
+    ul li:last-child{
+        border-right: 1px solid rgba(0,0,0,.3);
+    }
+}
+/* ---------------------------- MAIN --------------------------------- */
+main{
+    figure.photo{
+        width:25% - $gutterDbl;
+        float: left;
+    }
+
+    figure.photo:nth-child(2n){
+        clear: none;
+    }
+
+    div.blog article {
+        float: left;
+        width: 33.33% - $gutterDbl;
+    }
+
+    div.blog article:nth-child(2n+1) {
+        clear: none;
+    }
+
+    div.blog article:nth-child(3n+1) {
+        clear: left;
+    }
+}
